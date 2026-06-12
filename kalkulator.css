@@ -1,0 +1,159 @@
+/* ============================================
+   kalkulator.css — Elemen Spesifik Halaman Kalkulator
+   Nama: Amanda Damayanti | NIM: 202432027
+   ============================================ */
+
+/* ── PESAN SAMBUTAN ── */
+.welcome-banner {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── JUDUL KALKULATOR ── */
+.calc-header {
+  margin-bottom: 1.25rem;
+}
+
+.calc-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.calc-header p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── BOBOT PENILAIAN ── */
+.bobot-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.bobot-item {
+  flex: 1;
+  text-align: center;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.5rem;
+}
+
+.bobot-persen {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+
+.bobot-nama {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* ── PESAN ERROR ── */
+.error-message {
+  display: none;
+  background: #fef2f2;
+  border: 1.5px solid #fca5a5;
+  color: #dc2626;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.error-message.show {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── HASIL NILAI ── */
+.hasil-section {
+  display: none;
+  margin-top: 1.25rem;
+  text-align: center;
+  animation: fadeIn 0.35s ease;
+}
+
+.hasil-section.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hasil-nilai-angka {
+  font-family: 'Syne', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.hasil-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+/* Grade badge dengan warna berbeda per grade */
+.grade-badge {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 64px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.grade-A { background: #dcfce7; color: #16a34a; }
+.grade-B { background: #dbeafe; color: #1d4ed8; }
+.grade-C { background: #fef9c3; color: #ca8a04; }
+.grade-D { background: #ffedd5; color: #ea580c; }
+.grade-E { background: #fee2e2; color: #dc2626; }
+
+.grade-keterangan {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.6rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 500px) {
+  .bobot-row {
+    gap: 0.5rem;
+  }
+  .bobot-persen {
+    font-size: 1.1rem;
+  }
+}
